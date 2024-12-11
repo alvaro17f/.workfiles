@@ -1,10 +1,12 @@
 { pkgs, ... }:
 {
   imports = [
+    ./direnv
     ./fastfetch
     ./fzf
     ./git
     ./lazygit
+    ./neovim
     ./starship
     ./yazi
   ];
