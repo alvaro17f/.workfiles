@@ -7,7 +7,7 @@
   imports = [
     ./programs
     ./scripts
-    # ./shell
+    ./shell
   ];
   programs.home-manager.enable = true;
 }

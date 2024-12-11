@@ -1,4 +1,4 @@
-{ ... }:
+{ user, ... }:
 {
   programs.bash = {
     enable = true;
@@ -6,6 +6,10 @@
     # historyFile = null;
     # historyFileSize = 0;
     initExtra = ''
+      if [ -e /home/${user}/.nix-profile/etc/profile.d/nix.sh ]; then
+        . /home/${user}/.nix-profile/etc/profile.d/nix.sh
+      fi
+
       fastfetch
     '';
     bashrcExtra = ''

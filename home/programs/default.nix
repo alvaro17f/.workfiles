@@ -5,6 +5,7 @@
     ./fzf
     ./git
     ./lazygit
+    ./starship
     ./yazi
   ];
 
@@ -26,7 +27,6 @@
     portal
     ripgrep
     rustup
-    starship
     unzip
     zig
     zoxide
