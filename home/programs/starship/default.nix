@@ -1,4 +1,4 @@
-{ hostname, ... }:
+{ user, ... }:
 {
   programs.starship = {
     enable = true;
@@ -13,7 +13,7 @@
         show_always = true;
         style_user = "bold fg:#cdd6f4 bg:#313244";
         style_root = "bold fg:#f38ba8 bg:#313244";
-        format = if (hostname == "zenon") then ''[$user ]($style)'' else ''[${hostname} ]($style)'';
+        format = ''[${user} ]($style)'';
       };
 
       directory = {
