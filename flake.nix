@@ -25,7 +25,7 @@
         home = "/home/${user}";
         config = "${home}/.config";
         local = "${home}/.local";
-        dotfiles = "${home}/.dotfiles";
+        dotfiles = "${home}/.workfiles";
         workspace = "${home}/Workspace";
 
         #===== directories =====#
