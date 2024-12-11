@@ -22,7 +22,6 @@
     gnutar
     go
     ncdu
-    neovim
     nodePackages."@antfu/ni"
     ouch
     pfetch
