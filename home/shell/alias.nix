@@ -1,7 +1,5 @@
 {
   pkgs,
-  hostname,
-  path,
   settings,
   ...
 }:
@@ -30,7 +28,7 @@
     "," = "nix-shell -p";
     gendelete = "sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations +10";
     genlist = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system";
-    rebuild = "nix flake update --flake ~/.config/home-manager && home-manager switch && nix profile wipe-history";
+    rebuild = "nix flake update --flake ~/.workfiles && home-manager switch --flake ~/.workfiles && nix profile wipe-history";
     nixdiff = "nix profile diff-closures --profile /nix/var/nix/profiles/system";
   };
 }

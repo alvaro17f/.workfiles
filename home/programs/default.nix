@@ -1,9 +1,4 @@
-{
-  lib,
-  pkgs,
-  settings,
-  ...
-}:
+{ pkgs, ... }:
 {
   imports = [
     ./fastfetch
@@ -14,7 +9,7 @@
   ];
 
   home.packages = with pkgs; [
-    home-manager
+    # home-manager
     nixfmt-rfc-style
     ########
     bat
@@ -26,7 +21,9 @@
     ncdu
     neovim
     nodePackages."@antfu/ni"
+    ouch
     pfetch
+    portal
     ripgrep
     rustup
     starship

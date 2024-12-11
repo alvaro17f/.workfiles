@@ -16,7 +16,7 @@
       home-manager,
     }:
     let
-      settings = import ./settings;
+      settings = import ./settings { };
 
       user = settings.user;
       system = settings.system;
@@ -40,7 +40,7 @@
       };
 
       pkgs = import nixpkgs {
-        system = settigs.system;
+        system = system;
         config = {
           allowUnfree = true;
           allowUnfreePredicate = (_: true);
@@ -49,7 +49,6 @@
 
       extraArgs = {
         inherit
-          inputs
           pkgs
           user
           path
@@ -58,7 +57,8 @@
       };
     in
     {
-      homeConfigurations = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."${user}" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
         extraSpecialArgs = extraArgs;
         modules = [
           ./home

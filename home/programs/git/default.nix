@@ -3,7 +3,7 @@
   programs = {
     git = {
       enable = true;
-      userName = settings.name;
+      userName = settings.user;
       userEmail = settings.git.email;
       extraConfig = {
         init = {

@@ -408,11 +408,6 @@
         run = [ "shell '${settings.apps.editor} $@' --block" ];
         desc = "${settings.apps.editor}";
       }
-      {
-        on = [ "c" ];
-        run = [ "shell '${settings.apps.code} .'" ];
-        desc = "${settings.apps.code}";
-      }
 
       #################
       # SUDO

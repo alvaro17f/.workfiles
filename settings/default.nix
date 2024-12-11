@@ -1,6 +1,6 @@
 { ... }:
 {
-  name = "x209423";
+  user = "x209423";
   system = "x86_64-linux";
 
   shell = "bash";

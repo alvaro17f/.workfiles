@@ -1,4 +1,4 @@
-{ lib, settings, ... }:
+{ ... }:
 {
   imports = [
     ./bash
