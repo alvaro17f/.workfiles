@@ -10,6 +10,7 @@
         . /home/${user}/.nix-profile/etc/profile.d/nix.sh
       fi
 
+      eval "$(zoxide init bash)"
       eval "$(fnm env --use-on-cd)"
 
       fastfetch
