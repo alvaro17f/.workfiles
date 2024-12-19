@@ -7,6 +7,7 @@
     ./git
     ./lazygit
     ./neovim
+    ./ripgrep
     ./starship
     ./yazi
   ];
@@ -26,7 +27,6 @@
     ouch
     pfetch
     portal
-    ripgrep
     rustup
     unzip
     zig
