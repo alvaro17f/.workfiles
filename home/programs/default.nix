@@ -4,6 +4,7 @@
     ./direnv
     ./fastfetch
     ./fzf
+    ./gh
     ./git
     ./langs
     ./lazygit
