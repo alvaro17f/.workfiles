@@ -11,6 +11,7 @@
     ./ripgrep
     ./starship
     ./yazi
+    ./zoxide
   ];
 
   home.packages = with pkgs; [
@@ -28,7 +29,6 @@
     pfetch
     portal
     unzip
-    zoxide
   ];
 
 }

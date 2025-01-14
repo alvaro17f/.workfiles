@@ -10,12 +10,6 @@
         . /home/${user}/.nix-profile/etc/profile.d/nix.sh
       fi
 
-      eval "$(zoxide init bash)"
-      eval "$(fnm env --use-on-cd)"
-
-      fastfetch
-    '';
-    bashrcExtra = ''
       set -o vi
       set -o noclobber # Use `>|` to force redirection to an existing file
 
@@ -36,6 +30,10 @@
       shopt -s globstar
       shopt -s nocaseglob
       shopt -s checkwinsize
+
+      eval "$(fnm env --use-on-cd)"
+
+      fastfetch
     '';
   };
 }

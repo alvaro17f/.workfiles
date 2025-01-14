@@ -17,7 +17,6 @@
     }:
     let
       settings = import ./settings { };
-
       user = settings.user;
       system = settings.system;
 
@@ -49,7 +48,6 @@
 
       extraArgs = {
         inherit
-          pkgs
           user
           path
           settings
@@ -58,7 +56,7 @@
     in
     {
       homeConfigurations."${user}" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+        pkgs = pkgs;
         extraSpecialArgs = extraArgs;
         modules = [
           ./home

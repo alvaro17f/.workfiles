@@ -14,9 +14,9 @@
         printRemaining = false;
       };
       display = {
-        separator = " -> ";
+        separator = "  ";
         color = {
-          keys = "black";
+          keys = "yellow";
           output = "blue";
           "1" = "blue";
           "2" = "red";
@@ -34,30 +34,38 @@
         }
         {
           type = "os";
-          key = "os";
+          key = "󱄅";
           format = "{3}";
         }
         {
           type = "kernel";
-          key = "kernel";
+          key = "󰌽";
         }
         {
           type = "shell";
-          key = "shell";
+          key = "";
+        }
+        {
+          type = "wm";
+          key = "";
         }
         {
           type = "terminal";
-          key = "term";
+          key = "";
         }
         {
           type = "cpu";
-          key = "cpu";
+          key = "";
           format = "{1}";
         }
         {
           type = "gpu";
-          key = "gpu";
+          key = "󰊗";
           format = "{2}";
+        }
+        {
+          type = "packages";
+          key = "";
         }
         "break"
         {
