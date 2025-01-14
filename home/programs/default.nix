@@ -5,6 +5,7 @@
     ./fastfetch
     ./fzf
     ./git
+    ./langs
     ./lazygit
     ./neovim
     ./ripgrep
@@ -21,15 +22,12 @@
     fd
     fnm
     gnutar
-    go
     ncdu
     nodePackages."@antfu/ni"
     ouch
     pfetch
     portal
-    rustup
     unzip
-    zig
     zoxide
   ];
 
