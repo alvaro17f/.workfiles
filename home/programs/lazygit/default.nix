@@ -26,10 +26,6 @@ let
   };
 in
 {
-  imports = [
-    ./scripts/aicommit.nix
-  ];
-
   programs.lazygit = {
     enable = true;
     package = pkgs.lazygit;
@@ -46,16 +42,6 @@ in
       os = {
         editPreset = if settings.apps.editor == "nvim" then "nvim-remote" else settings.apps.editor;
       };
-      customCommands = [
-        {
-          key = "<c-a>";
-          description = "Pick LLM commit";
-          loadingText = "waiting for LLM to generate commit messages...";
-          command = "aicommit";
-          context = "files";
-          subprocess = true;
-        }
-      ];
     };
   };
 }
