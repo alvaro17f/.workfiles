@@ -1,5 +1,7 @@
 { ... }:
 {
+  name = "Alvaro Garcia";
+
   user = "x209423";
   system = "x86_64-linux";
 

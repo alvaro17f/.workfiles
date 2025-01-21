@@ -3,7 +3,7 @@
   programs = {
     git = {
       enable = true;
-      userName = settings.user;
+      userName = settings.name;
       userEmail = settings.git.email;
       extraConfig = {
         init = {
@@ -15,20 +15,14 @@
         push = {
           autoSetupRemote = true;
         };
-        merge = {
-          confictstyle = "diff3";
-        };
-        interactive = {
-          difffilter = "delta --color-only --features=interactive";
+        diff = {
+          tool = "nvimdiff";
         };
       };
-      delta = {
+      difftastic = {
         enable = true;
-        options = {
-          line-numbers = true;
-          side-by-side = true;
-          navigate = true;
-        };
+        display = "side-by-side";
+        color = "always";
       };
     };
   };
