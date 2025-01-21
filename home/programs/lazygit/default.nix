@@ -33,6 +33,11 @@ in
       disableStartupPopups = true;
       notARepository = "quit";
       promptToReturnFromSubprocess = false;
+      git = {
+        paging = {
+          externalDiffCommand = "${pkgs.difftastic}/bin/difft --color=always";
+        };
+      };
       gui = {
         nerdFontsVersion = "3";
         theme = catppuccin.theme;
