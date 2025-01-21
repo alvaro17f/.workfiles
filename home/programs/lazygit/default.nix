@@ -35,7 +35,7 @@ in
       promptToReturnFromSubprocess = false;
       git = {
         paging = {
-          externalDiffCommand = "${pkgs.difftastic}/bin/difft --color=always --display=side-by-side-show-both --syntax-highlight=on --tab-width=2";
+          externalDiffCommand = "${pkgs.difftastic}/bin/difft --color=always --display=inline --syntax-highlight=on --tab-width=2";
         };
       };
       gui = {
