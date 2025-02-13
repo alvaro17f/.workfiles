@@ -21,7 +21,7 @@
       self,
       nixpkgs,
       home-manager,
-    }:
+    }@inputs:
     let
       settings = import ./settings { };
       user = settings.user;
@@ -55,6 +55,7 @@
 
       extraArgs = {
         inherit
+          inputs
           user
           path
           settings
