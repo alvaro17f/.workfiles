@@ -17,11 +17,7 @@
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-    }@inputs:
+    { nixpkgs, home-manager, ... }@inputs:
     let
       settings = import ./settings { };
       user = settings.user;
