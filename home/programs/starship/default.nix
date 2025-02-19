@@ -1,10 +1,26 @@
-{ user, ... }:
+{ lib, user, ... }:
 {
   programs.starship = {
     enable = true;
 
     settings = {
-      format = "[](#313244)$username[](bg:#45475a fg:#313244)$directory[](fg:#45475a bg:#585b70)$git_branch$git_status[](fg:#585b70 bg:#89dceb)$golang$nodejs$rust$zig[](fg:#89dceb bg:#89b4fa)$time[ ](fg:#89b4fa)";
+      format = lib.concatStrings [
+        "[](#313244)"
+        "$username"
+        "[](bg:#45475a fg:#313244)"
+        "$directory"
+        "[](fg:#45475a bg:#585b70)"
+        "$git_branch"
+        "$git_status"
+        "[](fg:#585b70 bg:#89dceb)"
+        "$golang"
+        "$nodejs"
+        "$rust"
+        "$zig"
+        "[](fg:#89dceb bg:#89b4fa)"
+        "$time"
+        "[ ](fg:#89b4fa)"
+      ];
 
       command_timeout = 5000;
       # add_newline = false;
