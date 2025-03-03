@@ -359,8 +359,8 @@
           "g"
           "\\"
         ];
-        run = [ "cd /run/media/${user}" ];
-        desc = "external devices";
+        run = [ "cd /mnt/c/Users/${user}" ];
+        desc = "windows";
       }
 
       #################
